@@ -1,0 +1,16 @@
+"""
+使用脚本来执行
+"""
+import subprocess
+from subprocess import check_output
+import os
+
+data_path = r'D:\workingDirectory\pythonProjects\CodeFragmentPy\ffmpeg'
+ffmpeg = r'D:\installed\ffmpeg-20170404-1229007-win64-static\bin\ffmpeg.exe'
+os.chdir(data_path)
+
+res = subprocess.call([ffmpeg, '-ss', '0', '-t', '15', '-i','139421174.flv', '-c', 'copy', '-y', '139421174_out.flv'])
+
+# print(res)
+
+# subprocess.run(r'ffmpeg -i .\139421250.flv -ss 0 -t 100.520 -qscale 0 139421250_out.flv')
