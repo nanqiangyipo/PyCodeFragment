@@ -4,3 +4,5 @@
 .idea/misc.xml
 .idea/workspace.xml
 data
+.ipynb_checkpoints
+*.swp
