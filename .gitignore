@@ -1,0 +1,6 @@
+.idea
+.idea/*
+*.ubuntu
+.idea/misc.xml
+.idea/workspace.xml
+data
