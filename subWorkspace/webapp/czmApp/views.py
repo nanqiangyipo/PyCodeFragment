@@ -4,6 +4,7 @@ from django.http import HttpResponse ,HttpResponseRedirect
 from .forms import NameForm
 from django.urls import reverse
 
+
 def index(requst):
     return HttpResponse("<h1>love is sea ! hahah</h1>")
 
@@ -17,3 +18,10 @@ def get_name(request):
         form = NameForm()
 
     return render(request,'czmApp/name.html',{'form':form})
+
+def test_staticfile(request):
+
+    return render(request,'test_staticfile.html',context={'czm':'hello czm'})
+
+def play_video(request):
+    return render(request,'czmApp/play_video.html')

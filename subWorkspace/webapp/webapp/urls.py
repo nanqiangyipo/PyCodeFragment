@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from czmApp.views import index, get_name
-
+from czmApp.views import index, get_name,test_staticfile
+import czmApp.views as views
 app_name='czmapp'
-
 urlpatterns = [
     url(r'^name$', get_name, name='get_name'),
     url(r'^admin/', admin.site.urls),
-    url(r'^test$', index, name='czm_test')
+    url(r'^test$', index, name='czm_test'),
+    url(r'^playvideo$', views.play_video, name='play_video'),
+    url(r'^',test_staticfile),
 
 ]
+

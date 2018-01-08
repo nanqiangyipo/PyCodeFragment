@@ -119,15 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+# static在渲染后的文档里面呈现出这个名称
 STATIC_URL = '/static/'
 
 # 把每个应用下面的static下所有文件拷贝到root这个指定的目录，然后可以使用一个统一的地址进行访问----STATIC_URL
-STATIC_ROOT = r'D:/workingDirectory/pythonProjects/CodeFragmentPy/webapp/all_static'
+STATIC_ROOT = os.path.join(BASE_DIR,'all_static')
 
 # 除了应用单独所需要的静态文件以外，通过STATICFILES_DIRS可以指定其他的非某个app单独使用的静态文件。考虑的很周到啊
 STATICFILES_DIRS = [
-    r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\czmApp',
-    ('yu_ming',r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\static_yuming'),
-    ('yu_ming',r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\static_yuming2'),
+    # r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\czmApp',
+    # ('yu_ming',r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\static_yuming'),
+    # ('yu_ming',r'D:\workingDirectory\pythonProjects\CodeFragmentPy\webapp\templates\static_yuming2'),
 ]
 # 定义好这些后在manage.py执行 python manage.py collectstatic就能生成STATIC_ROOT的目录
